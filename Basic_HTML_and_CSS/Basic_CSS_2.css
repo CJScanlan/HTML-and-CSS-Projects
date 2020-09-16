@@ -1,0 +1,14 @@
+p	{
+	color: white;
+	background-color: #96dba8;
+	font-size: medium;
+	text-align: right;
+	font-style: italic;
+	font-family: "ABeeZee";
+}
+h1 {
+	text-align: right;
+	color: white;
+	text-shadow: 2px 2px 4px #96dba8;
+	font-family: "ABeeZee";
+}

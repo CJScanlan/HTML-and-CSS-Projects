@@ -1,0 +1,21 @@
+h1 {
+	color: DarkGoldenRod;
+	font-family: "Rockwell", Courier, monospace;
+}
+td {
+	height: 60px;
+	width: 10%;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid silver;
+	background-color: #f8f3e7;
+	color: DarkGoldenRod;
+	
+}
+th {
+	font-family: "Rockwell", Courier, monospace;
+}
+td:hover {
+		background-color: DarkGoldenRod;
+		color: white;
+}
