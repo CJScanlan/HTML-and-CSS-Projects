@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 	<body>
 	<!-- NAV -->
@@ -53,11 +54,7 @@
 				<!-- PHOTO-CONTAINER 1-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_1.png" alt="Zig-Zag Plant Holder">
-						<div class="photo-overlay">
-							<h3>Zig-Zag Plant Holder</h3>
-							<p>Geometric design on both weave and branch.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_1.png" alt="Zig-Zag Plant Holder" onclick="openModal();currentSlide(1)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 1-->
@@ -65,11 +62,7 @@
 				<!-- PHOTO-CONTAINER 2-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_2.png" alt="Zig-Zag Plant Holder">
-						<div class="photo-overlay">
-							<h3>Zig-Zag plant Holder</h3>
-							<p>Geometric design on both weave and branch.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_2.png" alt="Zig-Zag Plant Holder" onclick="openModal();currentSlide(2)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 2-->
@@ -77,11 +70,7 @@
 				<!-- PHOTO-CONTAINER 3-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_3.png" alt="Diamond Plant Holder">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Symmetrical diamonds with hand-picked wood.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_3.png" alt="Diamond Plant Holder" onclick="openModal();currentSlide(3)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 3-->
@@ -89,11 +78,7 @@
 				<!-- PHOTO-CONTAINER 4-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_4.png" alt="Diamond Plant Holder">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Symmetrical diamonds with hand-picked wood.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_4.png" alt="Diamond Plant Holder" onclick="openModal();currentSlide(4)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 4-->
@@ -101,11 +86,7 @@
 				<!-- PHOTO-CONTAINER 5-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_5.png" alt="Feather Macramé">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Woven with feathers and golden beads.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_5.png" alt="Feather Macramé" onclick="openModal();currentSlide(5)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 5-->
@@ -113,11 +94,7 @@
 				<!-- PHOTO-CONTAINER 6-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_6.png" alt="Simple Macramé">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Beauty in Simplicity.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_6.png" alt="Simple Macramé" onclick="openModal();currentSlide(6)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 6-->
@@ -125,11 +102,7 @@
 				<!-- PHOTO-CONTAINER 7-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_7.png" alt="Jade Macramé">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Beautiful Jade centerpiece collected from Big Sur, California.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_7.png" alt="Jade Macramé" onclick="openModal();currentSlide(7)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 7-->
@@ -137,11 +110,7 @@
 				<!-- PHOTO-CONTAINER 8-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_8.png" alt="Small Plant Hanger">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Your plant's new favorite home. </p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_8.png" alt="Small Plant Hanger" onclick="openModal();currentSlide(8)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 8-->
@@ -149,11 +118,7 @@
 				<!-- PHOTO-CONTAINER 9-->
 				<div class="photo-container">
 					<div class="photo">
-						<img src="./Images/Thumb/Thumbnail_9.png" alt="Small Plant Hanger">
-						<div class="photo-overlay">
-							<h3>Click to Enlarge</h3>
-							<p>Simple and snug for your favorite plant.</p>
-						</div>
+						<img src="./Images/Thumb/Thumbnail_9.png" alt="Small Plant Hanger" onclick="openModal();currentSlide(9)">
 					</div>
 				</div>
 				<!-- END PHOTO-CONTAINER 9-->
@@ -161,6 +126,104 @@
 			</div>
 	</section>
 	<!-- END GALLERY -->
+
+	<!-- Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 9</div>
+				<img src="Images/Thumb/Thumbnail_1.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 9</div>
+				<img src="Images/Thumb/Thumbnail_2.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 9</div>
+				<img src="Images/Thumb/Thumbnail_3.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 9</div>
+				<img src="Images/Thumb/Thumbnail_4.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5 / 9</div>
+				<img src="Images/Thumb/Thumbnail_5.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 9</div>
+				<img src="Images/Thumb/Thumbnail_6.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">7 / 9</div>
+				<img src="Images/Thumb/Thumbnail_7.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">8 / 9</div>
+				<img src="Images/Thumb/Thumbnail_8.png" style="width:540px; height: 810px;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">9 / 9</div>
+				<img src="Images/Thumb/Thumbnail_9.png" style="width:540px; height: 810px;">
+			</div>
+
+			<!-- Next/previous controls-->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- Caption text -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!-- Thumbnail image controls -->
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_1.png" onclick="currentSlide(1)" alt="Geometric design on both weave and branch." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_2.png" onclick="currentSlide(2)" alt="Geometric design on both weave and branch." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_3.png" onclick="currentSlide(3)" alt="Symmetrical diamonds with hand-picked wood." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_4.png" onclick="currentSlide(4)" alt="Symmetrical diamonds with hand-picked wood." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_5.png" onclick="currentSlide(5)" alt="Woven with feathers and golden beads." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_6.png" onclick="currentSlide(6)" alt="Beauty in simplicity." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_7.png" onclick="currentSlide(7)" alt="Beautiful Jade centerpiece collected from Big Sur, California." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_8.png" onclick="currentSlide(8)" alt="Your plant's new favorite home." style="width:135px; height: 202.5px;">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="Images/Thumb/Thumbnail_9.png" onclick="currentSlide(9)" alt="Simple and snug for your favorite plant." style="width:135px; height: 202.5px;">
+			</div>
+		</div>
+	</div>
 		
 	<!-- VIDEO -->
 	<section>

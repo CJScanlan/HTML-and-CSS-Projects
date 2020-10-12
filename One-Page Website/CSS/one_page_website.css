@@ -7,6 +7,10 @@ body {
     margin: 0px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -44,7 +48,7 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index:100;
+    z-index:1;
 }
 
 li {
@@ -149,50 +153,149 @@ li a:hover {
     border-radius: 3px;
 }
 
-.photo-overlay {
-    line-height: normal;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: center; /* For centering text inside .photo */
-    align-items: center;
-    background: rgb(255, 255, 255, .2);
-}
 
 
 /*--------------------------------------------
     Photo Overlay Transitions
 ---------------------------------------------*/
 
-.photo-overlay {
-    opacity: 0;
-    transition: opacity .1s;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.photo-overlay p {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 25px;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: 500;
-}
-
-.photo-overlay:hover {
-    opacity: 1;
-}
 
 .photo img {
     transition: transform .5s;
     transform-origin: 50% 50%;
 }
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo-container:hover {
+    opacity: 0.5;
+    transition: .5s;
+    cursor: pointer;
+}
+
+/*=============================
+    LIGHTBOX
+==============================*/
+.column {
+    padding: 15px 15px;
+    display: inline-block;
+    margin: auto;
+}
+
+/*The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index:100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*Modal Content*/
+.modal-content {
+    text-align: center;
+    position: relative;
+    background-color:rgba(0,0,0,1);
+    margin: auto;
+    padding: 0;
+    width: auto;
+    max-width: 1200px;
+}
+
+/* The Close Button*/
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Hide the slides by default*/
+.mySlides {
+    display: none;
+}
+
+/*Next & previous buttons*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/*Position the "next button" to the right*/
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+/*On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*Number text (1/9) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+  }
+  
+.active,
+.demo:hover {
+    opacity: 1;
+  }
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
 
 
 
